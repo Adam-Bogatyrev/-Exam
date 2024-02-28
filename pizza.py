@@ -67,8 +67,16 @@ class BBQPizza(Pizza):
     def box(self) -> None:  
         print(super().prepare())  
 
-    def add_topping  
-
+    def add_topping(self, topping: str) -> None:
+        choice = input(f"Хотите добавить ингредиент {topping}? (да/нет)")
+        if choice.lower() == "нет"
+            return
+        if choice.lower() == "да"
+            if topping in self.toppings:
+                print(f"Ингредиент {topping} уже есть в {self.name}
+        self.topping.append(topping)
+        return
+        
 class SeafoodPizza(Pizza):
     def __init__(self, name, dough, sauce, toppings, price) -> None:
         super().__init__(name, dough, sauce, toppings, price)
